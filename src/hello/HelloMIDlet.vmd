@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualDesign projectType="vmd-midp" version="1">
+    <Document version="2">
+        <Component componentID="0" typeID="C#Root">
+            <Property name="version" typeID="Pjava.lang.String" value="VMIDP-2.0"/>
+            <Component componentID="1" typeID="C#PointsCategory">
+                <Component componentID="2" typeID="C#MobileDevice">
+                    <Property name="start" typeID="C#MobileDeviceStartEventSource" value="R3"/>
+                    <Property name="resume" typeID="C#MobileDeviceResumeEventSource" value="R4"/>
+                    <Component componentID="3" typeID="C#MobileDeviceStartEventSource">
+                        <Property name="eventHandler" typeID="C#EventHandler" value="R15"/>
+                        <Component componentID="15" typeID="C#SwitchDisplayableEventHandler">
+                            <Property name="eventSource" typeID="C#EventSource" value="R3"/>
+                            <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R22"/>
+                        </Component>
+                    </Component>
+                    <Component componentID="4" typeID="C#MobileDeviceResumeEventSource"/>
+                </Component>
+                <Component componentID="5" typeID="C#Display"/>
+                <Component componentID="28" typeID="C#IfPoint">
+                    <Property name="methodName" typeID="Pjava.lang.String" value="Vmethod"/>
+                    <Property name="true" typeID="C#IfTrueEventSource" value="R29"/>
+                    <Property name="false" typeID="C#IfFalseEventSource" value="R30"/>
+                    <Component componentID="29" typeID="C#IfTrueEventSource"/>
+                    <Component componentID="30" typeID="C#IfFalseEventSource"/>
+                </Component>
+                <Component componentID="31" typeID="C#EntryPoint">
+                    <Property name="methodName" typeID="Pjava.lang.String" value="VloginFromSavedCredentials"/>
+                    <Property name="start" typeID="C#EntryPointStartEventSource" value="R32"/>
+                    <Component componentID="32" typeID="C#EntryPointStartEventSource"/>
+                </Component>
+            </Component>
+            <Component componentID="6" typeID="C#ControllersCategory">
+                <Component componentID="7" typeID="C#CommandListener"/>
+                <Component componentID="9" typeID="C#ItemStateListener"/>
+                <Component componentID="17" typeID="C#ItemCommandListener"/>
+            </Component>
+            <Component componentID="8" typeID="C#CommandsCategory">
+                <Component componentID="18" typeID="Cjavax.microedition.lcdui.Command">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="VexitCommand"/>
+                    <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
+                    <Property name="label" typeID="Pjava.lang.String" value="VExit"/>
+                    <Property name="type" typeID="Pint" value="V7"/>
+                </Component>
+                <Component componentID="23" typeID="C#LoginScreenLoginCommand">
+                    <Property name="label" typeID="Pjava.lang.String" value="VLogin"/>
+                    <Property name="type" typeID="Pint" value="V4"/>
+                    <Property name="priority" typeID="Pint" value="V0"/>
+                    <Property name="ordinary" typeID="Pboolean" value="Vfalse"/>
+                </Component>
+            </Component>
+            <Component componentID="10" typeID="C#DisplayablesCategory">
+                <Component componentID="22" typeID="Corg.netbeans.microedition.lcdui.LoginScreen">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="VloginScreen"/>
+                    <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
+                    <Property name="commands" typeID="1C#CommandEventSource" value="A1:3_R24"/>
+                    <Property name="title" typeID="Pjava.lang.String" value="VPicasa Login"/>
+                    <Property name="commandListener" typeID="C#CommandListener" value="R7"/>
+                    <Property name="useButton" typeID="Pboolean" value="Vfalse"/>
+                    <Property name="backgroundColor" typeID="Pint" value="V-3355444"/>
+                    <Property name="foregroungColor" typeID="Pint" value="V0"/>
+                    <Property name="usernameLabel" typeID="Pjava.lang.String" value="VUsername"/>
+                    <Property name="passwordLabel" typeID="Pjava.lang.String" value="VPassword"/>
+                    <Property name="loginButtonText" typeID="Pjava.lang.String" value="VLogin"/>
+                    <Component componentID="24" typeID="C#LoginScreenLoginCommandEventSource">
+                        <Property name="eventHandler" typeID="C#EventHandler" value="R26"/>
+                        <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R22"/>
+                        <Property name="command" typeID="Cjavax.microedition.lcdui.Command" value="R23"/>
+                        <Component componentID="26" typeID="C#ExitMidletEventHandler">
+                            <Property name="eventSource" typeID="C#EventSource" value="R24"/>
+                            <Property name="mobileDevice" typeID="C#MobileDevice" value="R2"/>
+                        </Component>
+                    </Component>
+                </Component>
+            </Component>
+            <Component componentID="13" typeID="C#ResourcesCategory"/>
+            <Component componentID="21" typeID="C#DatabindingCategory"/>
+        </Component>
+    </Document>
+    <FlowScene version="1">
+        <Node componentID="31" descriptorID="componentNode31" x="433" y="305"/>
+        <Node componentID="2" descriptorID="componentNode2" x="85" y="203"/>
+        <Node componentID="22" descriptorID="componentNode22" x="435" y="89"/>
+        <Node componentID="28" descriptorID="componentNode28" x="203" y="344"/>
+    </FlowScene>
+</VisualDesign>
